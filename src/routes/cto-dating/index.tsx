@@ -45,7 +45,7 @@ export default component$(() => {
 		<main class="flex w-full flex-col items-center justify-center">
 			<Header></Header>
 			<Description></Description>
-			<Form onSubmit$={handleSubmit} class="mb-4 px-8 pb-8 pt-6">
+			<Form onSubmit$={handleSubmit} class="mb-4 w-full px-8 pb-8 pt-6 lg:w-3/4">
 				<Field name="name">
 					{(field, props) => (
 						<div class="mb-4">
@@ -101,11 +101,11 @@ export default component$(() => {
 						</div>
 					)}
 				</Field>
-				<div class="flex w-full content-between gap-4">
-					<button class="w-1/2 rounded-md bg-primary  px-8 py-2 text-center text-lg duration-300 hover:bg-primary-dark" type="submit">
+				<div class="flex w-full flex-col content-between gap-4 lg:flex-row">
+					<button class="rounded-md bg-primary px-8  py-2 text-center text-lg duration-300 hover:bg-primary-dark lg:w-1/2" type="submit">
 						Demandez à être recontacté
 					</button>
-					<button class="w-1/2 rounded-md bg-primary  px-8 py-2 text-center text-lg duration-300 hover:bg-primary-dark" type="submit">
+					<button class="rounded-md bg-primary px-8  py-2 text-center text-lg duration-300 hover:bg-primary-dark lg:w-1/2" type="submit">
 						Prendre rendez-vous lors de "Entreprendre dans l'Ouest"
 					</button>
 				</div>

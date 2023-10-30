@@ -56,7 +56,7 @@ export default component$(() => {
 		<main class="w-full flex flex-col justify-center items-center">
 			<Header></Header>
             <Description></Description>
-            <Form onSubmit$={handleSubmit} class='px-8 pt-6 pb-8 mb-4'>
+            <Form onSubmit$={handleSubmit} class='w-full lg:w-3/4 px-8 pt-6 pb-8 mb-4'>
   		  		<Field name="name">
   		    		{(field, props) => (
   		      		<div class="mb-4">		
@@ -93,9 +93,9 @@ export default component$(() => {
   		      	</div>
   		    	)}
   		  	</Field>
-			<div class="flex w-full content-between gap-4">
-  		  		<button class='w-1/2 bg-primary hover:bg-primary-dark  px-8 py-2 duration-300 rounded-md text-lg text-center' type='submit'>Demandez à être recontacté</button>
-  		  		<button class='w-1/2 bg-primary hover:bg-primary-dark  px-8 py-2 duration-300 rounded-md text-lg text-center' type='submit'>Prendre rendez-vous lors de "Entreprendre dans l'Ouest"</button>
+			<div class="flex flex-col lg:flex-row w-full content-between gap-4">
+  		  		<button class='lg:w-1/2 bg-primary hover:bg-primary-dark  px-8 py-2 duration-300 rounded-md text-lg text-center' type='submit'>Demandez à être recontacté</button>
+  		  		<button class='lg:w-1/2 bg-primary hover:bg-primary-dark  px-8 py-2 duration-300 rounded-md text-lg text-center' type='submit'>Prendre rendez-vous lors de "Entreprendre dans l'Ouest"</button>
 			</div>
     		</Form>
 		</main>

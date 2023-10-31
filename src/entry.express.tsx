@@ -16,7 +16,7 @@ import {fileURLToPath} from 'node:url';
 import {join} from 'node:path';
 
 declare global {
-	interface QwikCityPlatform extends PlatformNode {}
+	type QwikCityPlatform = PlatformNode;
 }
 
 // import compression from 'compression';

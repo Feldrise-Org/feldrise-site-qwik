@@ -1,7 +1,9 @@
 import {$, component$} from '@builder.io/qwik';
 import {routeLoader$, type DocumentHead} from '@builder.io/qwik-city';
-import {InitialValues, SubmitHandler, formAction$, useForm, valiForm$} from '@modular-forms/qwik';
-import {object, string, minLength, email, Input} from 'valibot';
+import type {InitialValues, SubmitHandler} from '@modular-forms/qwik';
+import {formAction$, useForm, valiForm$} from '@modular-forms/qwik';
+import type {Input} from 'valibot';
+import {object, string, minLength, email} from 'valibot';
 import Description from '~/components/cto-dating/description';
 import Header from '~/components/cto-dating/header';
 
@@ -22,12 +24,13 @@ const getInitFormValues = (): InitialValues<AppointementForm> => ({
 });
 
 // Note: State is kept in local variable for demo purposes
-let appointementFormValues: InitialValues<AppointementForm> = getInitFormValues();
+const appointementFormValues: InitialValues<AppointementForm> = getInitFormValues();
 
 export const useFormLoader = routeLoader$<InitialValues<AppointementForm>>(() => appointementFormValues);
 
 export const useFormAction = formAction$<AppointementForm>(values => {
 	// Runs on server
+	console.log(values);
 }, valiForm$(AppointementSchema));
 
 export default component$(() => {
@@ -54,7 +57,8 @@ export default component$(() => {
 								{...props}
 								type="string"
 								value={field.value}
-								class="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+								class="focus:shadow-outline w-full appearance-none rounded
+							border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
 							/>
 							{field.error && <div class="mb-2 block text-sm font-bold text-red-600">{field.error}</div>}
 						</div>
@@ -68,7 +72,8 @@ export default component$(() => {
 								{...props}
 								type="string"
 								value={field.value}
-								class="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+								class="focus:shadow-outline w-full appearance-none rounded
+							border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
 							/>
 							{field.error && <div class="mb-2 block text-sm font-bold text-red-600">{field.error}</div>}
 						</div>
@@ -81,7 +86,8 @@ export default component$(() => {
 							<textarea
 								{...props}
 								value={field.value}
-								class="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+								class="focus:shadow-outline w-full appearance-none rounded
+							border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
 							/>
 							{field.error && <div class="mb-2 block text-sm font-bold text-red-600">{field.error}</div>}
 						</div>
@@ -95,7 +101,8 @@ export default component$(() => {
 								{...props}
 								type="email"
 								value={field.value}
-								class="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+								class="focus:shadow-outline w-full appearance-none rounded
+								border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
 							/>
 							{field.error && <div class="mb-2 block text-sm font-bold text-red-600">{field.error}</div>}
 						</div>

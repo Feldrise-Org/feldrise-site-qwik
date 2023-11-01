@@ -3,14 +3,16 @@ import {routeLoader$, type DocumentHead} from '@builder.io/qwik-city';
 import type {InitialValues, SubmitHandler} from '@modular-forms/qwik';
 import {formAction$, useForm, valiForm$} from '@modular-forms/qwik';
 import type {Input} from 'valibot';
-import {object, string, minLength, email} from 'valibot';
-import Description from '~/components/cto-dating/description';
-import Header from '~/components/cto-dating/header';
+import {object, string, minLength, email, boolean} from 'valibot';
+import Button from '~/components/button';
+import Description from '~/components/cto-meeting/description';
+import Header from '~/components/cto-meeting/header';
 
 const AppointementSchema = object({
 	name: string([minLength(1, 'Veuillez entrer votre nom et prénom.')]),
-	projectName: string(),
+	project: string(),
 	description: string([minLength(1, 'Veuillez entrer une description de votre projet.')]),
+	appointment: boolean(),
 	email: string([minLength(1, 'Veuillez entrer votre adresse e-mail.'), email("Votre e-mail n'est pas au bon format.")]),
 });
 
@@ -20,7 +22,8 @@ const getInitFormValues = (): InitialValues<AppointementForm> => ({
 	name: '',
 	description: '',
 	email: '',
-	projectName: '',
+	appointment: false,
+	project: '',
 });
 
 // Note: State is kept in local variable for demo purposes
@@ -34,25 +37,30 @@ export const useFormAction = formAction$<AppointementForm>(values => {
 }, valiForm$(AppointementSchema));
 
 export default component$(() => {
-	const [projectForm, {Form, Field}] = useForm<AppointementForm>({
+	const [, {Form, Field}] = useForm<AppointementForm>({
 		loader: useFormLoader(),
 		action: useFormAction(),
 		validate: valiForm$(AppointementSchema),
 	});
 
-	const handleSubmit: SubmitHandler<AppointementForm> = $((values, event) => {
+	const handleSubmit = $<SubmitHandler<AppointementForm>>(values => {
 		// Runs on client
-		window.open('https://calendly.com/feldrise-edo/15?primary_color=aa33ff&month=2023-11');
+		console.log(values);
+
+		if (values.appointment) {
+			window.open('https://calendly.com/feldrise-edo/15?primary_color=aa33ff&month=2023-11');
+		}
 	});
+
 	return (
 		<main class="flex w-full flex-col items-center justify-center">
-			<Header></Header>
-			<Description></Description>
-			<Form onSubmit$={handleSubmit} class="mb-4 w-full px-8 pb-8 pt-6 lg:w-3/4">
+			<Header />
+			<Description />
+			<Form onSubmit$={handleSubmit} class="mb-4 w-full max-w-desktop px-8 pb-8 pt-6">
 				<Field name="name">
 					{(field, props) => (
 						<div class="mb-4">
-							<label class="mb-2 block text-sm font-bold text-white">Votre nom et prénom :</label>
+							<label class="mb-2 block font-bold text-white">Votre nom et prénom :</label>
 							<input
 								{...props}
 								type="string"
@@ -64,10 +72,10 @@ export default component$(() => {
 						</div>
 					)}
 				</Field>
-				<Field name="projectName">
+				<Field name="project">
 					{(field, props) => (
 						<div class="mb-4 w-full">
-							<label class="mb-2 block text-sm font-bold text-white">Nom de votre projet :</label>
+							<label class="mb-2 block font-bold text-white">Nom de votre projet :</label>
 							<input
 								{...props}
 								type="string"
@@ -82,10 +90,11 @@ export default component$(() => {
 				<Field name="description">
 					{(field, props) => (
 						<div class="mb-4">
-							<label class="mb-2 block text-sm font-bold text-white">Description de votre projet :</label>
+							<label class="mb-2 block font-bold text-white">Description de votre projet :</label>
 							<textarea
 								{...props}
 								value={field.value}
+								rows={4}
 								class="focus:shadow-outline w-full appearance-none rounded
 							border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
 							/>
@@ -108,13 +117,27 @@ export default component$(() => {
 						</div>
 					)}
 				</Field>
-				<div class="flex w-full flex-col content-between gap-4 lg:flex-row">
-					<button class="rounded-md bg-primary px-8  py-2 text-center text-lg duration-300 hover:bg-primary-dark lg:w-1/2" type="submit">
-						Demandez à être recontacté
-					</button>
-					<button class="rounded-md bg-primary px-8  py-2 text-center text-lg duration-300 hover:bg-primary-dark lg:w-1/2" type="submit">
-						Prendre rendez-vous lors de "Entreprendre dans l'Ouest"
-					</button>
+				<Field name="appointment" type="boolean">
+					{(field, props) => (
+						<div class="mb-4 mt-4 flex items-start">
+							<div class="rounded-md bg-secondary p-4 text-white">
+								<label>
+									<input
+										class="
+										mr-2 h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500
+									"
+										{...props}
+										type="checkbox"
+										checked={field.value}
+									/>
+									Je souhaite aller à l'étape du rendez-vous (CTO Meeting) pendant le salon
+								</label>
+							</div>
+						</div>
+					)}
+				</Field>
+				<div class="mt-4 flex w-full justify-end">
+					<Button type="submit">Envoyer le formulaire</Button>
 				</div>
 			</Form>
 		</main>
@@ -122,11 +145,11 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-	title: 'Feldrise Blog',
+	title: 'Feldrise - CTO Meeting',
 	meta: [
 		{
 			name: 'description',
-			content: 'Prendre rendez-vous pour "Entreprendre dans l\'ouest"',
+			content: 'Prendre rendez-vous pour "Entreprendre dans l\'Ouest"',
 		},
 		{
 			name: 'og:title',
@@ -134,11 +157,11 @@ export const head: DocumentHead = {
 		},
 		{
 			name: 'og:description',
-			content: 'Prendre rendez-vous pour "Entreprendre dans l\'ouest"',
+			content: 'Prendre rendez-vous pour "Entreprendre dans l\'Ouest"',
 		},
 		{
 			name: 'og:url',
-			content: 'https://feldrise.com/blog',
+			content: 'https://feldrise.com/cto-meeting',
 		},
 		{
 			name: 'og:image',

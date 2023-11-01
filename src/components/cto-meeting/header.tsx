@@ -2,7 +2,7 @@ import {component$} from '@builder.io/qwik';
 
 export default component$(() => {
 	return (
-		<header class="w-full py-12 md:py-40 flex justify-center items-center flex-col bg-header-projects bg-fixed bg-cover bg-center">
+		<header class="w-full py-12 md:py-12 flex justify-center items-center flex-col bg-header-projects bg-fixed bg-cover bg-center">
 			<div class="
 				w-full max-w-desktop
 				px-8 py-16
@@ -15,7 +15,7 @@ export default component$(() => {
 						textDecorationSkipInk: 'none',
 					}}
 				>
-					Prendre rendez-vous
+					Formulaire
 				</h1>
 			</div>
 		</header>

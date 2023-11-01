@@ -3962,10 +3962,10 @@ uvu@^0.5.0:
     kleur "^4.0.3"
     sade "^1.7.3"
 
-valibot@^0.20.0:
-  version "0.20.0"
-  resolved "https://registry.yarnpkg.com/valibot/-/valibot-0.20.0.tgz#c15b675352c08a95882822e89e0301d292c6ec5e"
-  integrity sha512-a2Vy4oPIHvrwfPZF0Cl83yBn17Zgekp6IQ0PzdUFTPWtlwWFCJNHtOm/nypzv5o/6llKBsIEErswWHbvjNGzNw==
+valibot@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/valibot/-/valibot-0.19.0.tgz#de73c517d851a61586e4a463ab6d8ffda5318101"
+  integrity sha512-vzeuctzVirzoiDN9BTc4GludHaSgFYoy6AnbHOjfBUbX0DibqKuNCr2Ti4ox8eLdBdDSEZSZ3LwXZgjL6aE4RQ==
 
 vary@~1.1.2:
   version "1.1.2"

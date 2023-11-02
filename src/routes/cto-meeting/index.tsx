@@ -7,6 +7,7 @@ import {object, string, minLength, email, boolean} from 'valibot';
 import Button from '~/components/button';
 import Description from '~/components/cto-meeting/description';
 import Header from '~/components/cto-meeting/header';
+import {PrismaClient} from '@prisma/client';
 
 const AppointementSchema = object({
 	name: string([minLength(1, 'Veuillez entrer votre nom et prénom.')]),
@@ -31,9 +32,16 @@ const appointementFormValues: InitialValues<AppointementForm> = getInitFormValue
 
 export const useFormLoader = routeLoader$<InitialValues<AppointementForm>>(() => appointementFormValues);
 
-export const useFormAction = formAction$<AppointementForm>(values => {
-	// Runs on server
-	console.log(values);
+export const useFormAction = formAction$<AppointementForm>(async values => {
+	const prisma = new PrismaClient();
+	await prisma.appointment.create({
+		data: {
+			project: values.project,
+			appointment: values.appointment ? 1 : 0,
+			description: values.description,
+			email: values.email,
+		},
+	});
 }, valiForm$(AppointementSchema));
 
 export default component$(() => {
@@ -44,7 +52,6 @@ export default component$(() => {
 	});
 
 	const handleSubmit = $<SubmitHandler<AppointementForm>>(values => {
-		// Runs on client
 		console.log(values);
 
 		if (values.appointment) {

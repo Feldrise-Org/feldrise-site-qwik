@@ -1,0 +1,19 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://feldrise_site:JyOevSESZ1obs0hCNrUL@server.feldrise.com:3306/feldrise_site"
+}
+
+model Appointment {
+  id    Int     @id @default(autoincrement())
+  project String
+  description String @db.LongText
+  appointment Int
+  email String  @unique
+}

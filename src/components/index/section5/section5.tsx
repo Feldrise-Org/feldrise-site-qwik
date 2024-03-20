@@ -3,48 +3,27 @@ import PortraitImage from './portrait-image';
 
 export default component$(() => {
 	return (
-		<section
-			class="
-			flex
-			w-full items-center justify-center
-			border-t-[32px] border-primary
-			bg-cats bg-cover bg-fixed
-		"
-		>
-			<div
-				class="
-				flex
-				max-w-desktop flex-col
-				items-center justify-center gap-16 px-24 py-16
-			"
-			>
-				<div
-					class="
-					flex
-					h-full items-center justify-center gap-4
-				"
-				>
+		<section class="flex w-full items-center justify-center border-t-[32px] border-primary bg-cats bg-cover bg-fixed">
+			<div class="flex max-w-desktop flex-col items-center justify-center gap-16 px-24 py-16">
+				<section class="flex h-full items-center justify-center gap-4">
 					<div
 						class="
 						col-span-2 rounded-2xl
-						bg-[rgba(0,0,0,0.45)] p-12 shadow-lg backdrop-blur
-					"
+						bg-[rgba(0,0,0,0.45)] p-12 shadow-lg backdrop-blur"
 					>
 						<p class="text-3xl text-primary">Vous voulez en savoir plus sur Feldrise ?</p>
 						<div class="my-2 h-1 w-1/3 bg-primary" />
-						<div class="relative mb-3">
+						<div class="relative">
 							<h2 class="mb-0">
-								<button
-									class="rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid border-slate-100 p-4 text-left font-semibold transition-all ease-in"
-									data-collapse-target="collapse-1"
-								>
-									<span>Quelle est la mission de Feldrise ?</span>
-									<i class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"></i>
-									<i class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"></i>
+								<button class="group w-full cursor-pointer transition-all ease-in" data-collapse-target="collapse-1">
+									<div class="rounded-t-1 font-semibol relative m-0 flex  w-full items-center border-b border-solid p-4 text-left group-open:border-hidden">
+										<span class="pr-4">Quelle est la mission de Feldrise ?</span>
+										<i class="fa fa-chevron-down absolute right-0 pt-1 text-base transition-transform group-open:rotate-180"></i>
+									</div>
 								</button>
 							</h2>
 							<div data-collapse="collapse-1" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-								<div class="text-blue-gray-500/80 mt-6 p-4 text-sm leading-normal">
+								<div class="text-blue-gray-500/80 border-b p-4 text-sm leading-normal">
 									La mission de Feldrise est d'offrir un accompagnement sur mesure et innovant dans le développement de projets numériques. Nous nous engageons
 									à transformer votre vision en réalité en vous aidant à créer votre propre équipe technique, en fournissant des solutions technologiques
 									adaptées à vos besoins, qu'il s'agisse d'intelligence artificielle, de logiciels, de jeux vidéo ou d'applications mobiles. En allant au-delà
@@ -57,19 +36,17 @@ export default component$(() => {
 								</div>
 							</div>
 						</div>
-						<div class="relative mb-3">
+						<div class="relative">
 							<h2 class="mb-0">
-								<button
-									class="rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid border-slate-100 p-4 text-left font-semibold transition-all ease-in"
-									data-collapse-target="collapse-2"
-								>
-									<span>Quels types de solutions technologiques Feldrise accompagne-t-elle ?</span>
-									<i class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"></i>
-									<i class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"></i>
+								<button class="group w-full cursor-pointer transition-all ease-in" data-collapse-target="collapse-2">
+									<div class="rounded-t-1 font-semibol relative m-0 flex  w-full items-center border-b border-solid p-4 text-left group-open:border-hidden">
+										<span class="pr-4">Quels types de solutions technologiques Feldrise accompagne-t-elle ?</span>
+										<i class="fa fa-chevron-down absolute right-0 pt-1 text-base transition-transform group-open:rotate-180"></i>
+									</div>
 								</button>
 							</h2>
 							<div data-collapse="collapse-2" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-								<div class="text-blue-gray-500/80 p-4 text-sm leading-normal">
+								<div class="text-blue-gray-500/80 border-b p-4 text-sm leading-normal">
 									Feldrise est équipée pour prendre en charge une vaste gamme de projets numériques, couvrant des domaines aussi divers que l'intelligence
 									artificielle, le développement de logiciels, la création de jeux vidéo, la réalisation d'applications mobiles et plus encore. Notre
 									polyvalence et notre expertise technique nous permettent de répondre à vos besoins spécifiques avec des solutions sur mesure, quelle que soit
@@ -77,19 +54,17 @@ export default component$(() => {
 								</div>
 							</div>
 						</div>
-						<div class="relative mb-3">
+						<div class="relative">
 							<h2 class="mb-0">
-								<button
-									class="rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid border-slate-100 p-4 text-left font-semibold transition-all ease-in"
-									data-collapse-target="collapse-3"
-								>
-									<span>Quelles sont les grandes étapes de l’accompagnement d’un directeur technique chez Feldrise ?</span>
-									<i class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"></i>
-									<i class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"></i>
+								<button class="group w-full cursor-pointer transition-all ease-in" data-collapse-target="collapse-3">
+									<div class="rounded-t-1 font-semibol relative m-0 flex  w-full items-center border-b border-solid p-4 text-left group-open:border-hidden">
+										<span class="pr-4">Quelles sont les grandes étapes de l’accompagnement d’un directeur technique chez Feldrise ?</span>
+										<i class="fa fa-chevron-down absolute right-0 pt-1 text-base transition-transform group-open:rotate-180"></i>{' '}
+									</div>
 								</button>
 							</h2>
 							<div data-collapse="collapse-3" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-								<div class="text-blue-gray-500/80 p-4 text-sm leading-normal">
+								<div class="text-blue-gray-500/80 border-b p-4 text-sm leading-normal">
 									L’accompagnement d'un directeur technique chez Feldrise se déroule en plusieurs étapes clés pour garantir le succès de votre projet :<br />
 									<br />
 									<span class="rounded-lg bg-primary p-1">1</span> Analyse des Besoins :
@@ -125,19 +100,17 @@ export default component$(() => {
 								</div>
 							</div>
 						</div>
-						<div class="relative mb-3">
+						<div class="relative">
 							<h2 class="mb-0">
-								<button
-									class="rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid border-slate-100 p-4 text-left font-semibold transition-all ease-in"
-									data-collapse-target="collapse-4"
-								>
-									<span>Comment Feldrise identifie les besoins d'un projet numérique ?</span>
-									<i class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"></i>
-									<i class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"></i>
+								<button class="group w-full cursor-pointer transition-all ease-in" data-collapse-target="collapse-4">
+									<div class="rounded-t-1 font-semibol relative m-0 flex  w-full items-center border-b border-solid p-4 text-left group-open:border-hidden">
+										<span class="pr-4">Comment Feldrise identifie les besoins d'un projet numérique ?</span>
+										<i class="fa fa-chevron-down absolute right-0 pt-1 text-base transition-transform group-open:rotate-180"></i>{' '}
+									</div>
 								</button>
 							</h2>
 							<div data-collapse="collapse-4" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-								<div class="text-blue-gray-500/80 p-4 text-sm leading-normal">
+								<div class="text-blue-gray-500/80 border-b p-4 text-sm leading-normal">
 									Vous pouvez d’abord prendre{' '}
 									<a class="text-primary" href="https://calendly.com/feldrise-victor/45min?primary_color=aa33ff&month=2024-03" target="_blank">
 										contact
@@ -152,19 +125,19 @@ export default component$(() => {
 								</div>
 							</div>
 						</div>
-						<div class="relative mb-3">
+						<div class="relative">
 							<h2 class="mb-0">
-								<button
-									class="rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid border-slate-100 p-4 text-left font-semibold transition-all ease-in"
-									data-collapse-target="collapse-5"
-								>
-									<span>Y a-t-il une flexibilité dans la collaboration si les objectifs ou les besoins de notre entreprise évoluent au cours du projet ?</span>
-									<i class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"></i>
-									<i class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"></i>
+								<button class="group w-full cursor-pointer transition-all ease-in" data-collapse-target="collapse-5">
+									<div class="rounded-t-1 font-semibol relative m-0 flex  w-full items-center border-b border-solid p-4 text-left group-open:border-hidden">
+										<span class="pr-4">
+											Y a-t-il une flexibilité dans la collaboration si les objectifs ou les besoins de notre entreprise évoluent au cours du projet ?
+										</span>
+										<i class="fa fa-chevron-down absolute right-0 pt-1 text-base transition-transform group-open:rotate-180"></i>{' '}
+									</div>
 								</button>
 							</h2>
 							<div data-collapse="collapse-5" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-								<div class="text-blue-gray-500/80 p-4 text-sm leading-normal">
+								<div class="text-blue-gray-500/80 border-b p-4 text-sm leading-normal">
 									Plus qu'un prestataire, nous sommes votre partenaire. Nous comprenons que les objectifs et les besoins d'un projet peuvent évoluer avec le
 									temps, et nous sommes pleinement équipés pour nous adapter à ces changements. Notre système de collaboration est conçu pour être réactif et
 									modulable, permettant une ajustement fluide à vos exigences. Que ce soit par la redéfinition de la roadmap, l'ajustement des ressources
@@ -172,38 +145,36 @@ export default component$(() => {
 								</div>
 							</div>
 						</div>
-						<div class="relative mb-6">
+						<div class="relative">
 							<h2 class="mb-0">
-								<button
-									class="rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid border-slate-100 p-4 text-left font-semibold transition-all ease-in"
-									data-collapse-target="collapse-6"
-								>
-									<span>Quels sont les avantages de travailler avec des stagiaires ou bien des alternants sous la direction technique de Feldrise ?</span>
-									<i class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"></i>
-									<i class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"></i>
+								<button class="group w-full cursor-pointer transition-all ease-in" data-collapse-target="collapse-6">
+									<div class="rounded-t-1 font-semibol relative m-0 flex  w-full items-center border-b border-solid p-4 text-left group-open:border-hidden">
+										<span class="pr-4">
+											Quels sont les avantages de travailler avec des stagiaires ou bien des alternants sous la direction technique de Feldrise ?
+										</span>
+										<i class="fa fa-chevron-down absolute right-0 pt-1 text-base transition-transform group-open:rotate-180"></i>{' '}
+									</div>
 								</button>
 							</h2>
 							<div data-collapse="collapse-6" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-								<div class="text-blue-gray-500/80 p-4 text-sm leading-normal">
+								<div class="text-blue-gray-500/80 border-b p-4 text-sm leading-normal">
 									Opter pour un stagiaire représente une solution économique, il travaille à temps plein au sein de votre équipe. Notre rôle est de mener le
 									processus de recrutement, d'assurer la supervision et de veiller à la qualité du travail. Cette approche vous offre une valeur ajoutée tout en
 									maîtrisant les coûts, garantissant ainsi un résultat professionnel et satisfaisant.
 								</div>
 							</div>
 						</div>
-						<div class="relative mb-3">
+						<div class="relative">
 							<h2 class="mb-0">
-								<button
-									class="rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid border-slate-100 p-4 text-left font-semibold transition-all ease-in"
-									data-collapse-target="collapse-7"
-								>
-									<span>Quel est le modèle de tarification de Feldrise pour ses services ?</span>
-									<i class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"></i>
-									<i class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"></i>
+								<button class="group w-full cursor-pointer transition-all ease-in" data-collapse-target="collapse-7">
+									<div class="rounded-t-1 font-semibol relative m-0 flex  w-full items-center border-b border-solid p-4 text-left group-open:border-hidden">
+										<span class="pr-4">Quel est le modèle de tarification de Feldrise pour ses services ?</span>
+										<i class="fa fa-chevron-down absolute right-0 pt-1 text-base transition-transform group-open:rotate-180"></i>{' '}
+									</div>
 								</button>
 							</h2>
 							<div data-collapse="collapse-7" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-								<div class="text-blue-gray-500/80 p-4 text-sm leading-normal">
+								<div class="text-blue-gray-500/80 border-b p-4 text-sm leading-normal">
 									Le modèle tarifaire de Feldrise repose sur un système contractuel flexible, similaire à un abonnement mensuel, avec une obligation minimale de
 									deux demi-journées par mois. Ces demi-journées offrent une flexibilité totale, pouvant être réparties en heures tout au long du mois selon vos
 									besoins. Au début de chaque mois, nous déterminons ensemble le nombre demi-journées requises pour le projet. En fin de mois, vous êtes facturé
@@ -214,7 +185,7 @@ export default component$(() => {
 						<script src="node_modules/@material-tailwind/html/scripts/collapse.js"></script>
 						<script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
 					</div>
-				</div>
+				</section>
 
 				<h2
 					class="text-5xl font-bold underline decoration-primary decoration-[10px] underline-offset-[-5px]"

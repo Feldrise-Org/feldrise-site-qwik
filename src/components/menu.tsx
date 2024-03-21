@@ -21,7 +21,7 @@ const routes: IRoute[] = [
 		href: '/blog',
 	},
 	{
-		name: 'Nos bureux virtuels',
+		name: 'Nos bureaux virtuels',
 		href: "https://app.gather.town/app/0raFgE4sC0iW2rE4/Feldrise",
 	},
 ];

@@ -4,15 +4,15 @@ import PortraitImage from './portrait-image';
 export default component$(() => {
 	return (
 		<section class="flex w-full items-center justify-center border-t-[32px] border-primary bg-cats bg-cover bg-fixed">
-			<div class="flex max-w-desktop flex-col items-center justify-center gap-16 px-24 py-16">
+			<div class="flex max-w-desktop flex-col items-center justify-center gap-16 px-6 py-16 md:px-24">
 				<section class="flex h-full items-center justify-center gap-4">
 					<div
 						class="
 						col-span-2 rounded-2xl
-						bg-[rgba(0,0,0,0.45)] p-12 shadow-lg backdrop-blur"
+						bg-[rgba(0,0,0,0.45)] px-6 py-12 shadow-lg backdrop-blur md:p-12"
 					>
-						<p class="text-3xl text-primary">Vous voulez en savoir plus sur Feldrise ?</p>
-						<div class="my-2 h-1 w-1/3 bg-primary" />
+						<p class="text-3xl text-secondary">Vous voulez en savoir plus sur Feldrise ?</p>
+						<div class="my-2 h-1 w-1/3 bg-secondary" />
 						<div class="relative">
 							<h2 class="mb-0">
 								<button class="group w-full cursor-pointer transition-all ease-in" data-collapse-target="collapse-1">
@@ -23,7 +23,7 @@ export default component$(() => {
 								</button>
 							</h2>
 							<div data-collapse="collapse-1" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-								<div class="text-blue-gray-500/80 border-b p-4 text-sm leading-normal">
+								<div class="text-blue-gray-500/80 border-b p-4 text-base leading-normal">
 									La mission de Feldrise est d'offrir un accompagnement sur mesure et innovant dans le développement de projets numériques. Nous nous engageons
 									à transformer votre vision en réalité en vous aidant à créer votre propre équipe technique, en fournissant des solutions technologiques
 									adaptées à vos besoins, qu'il s'agisse d'intelligence artificielle, de logiciels, de jeux vidéo ou d'applications mobiles. En allant au-delà
@@ -46,7 +46,7 @@ export default component$(() => {
 								</button>
 							</h2>
 							<div data-collapse="collapse-2" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-								<div class="text-blue-gray-500/80 border-b p-4 text-sm leading-normal">
+								<div class="text-blue-gray-500/80 border-b p-4 text-base leading-normal">
 									Feldrise est équipée pour prendre en charge une vaste gamme de projets numériques, couvrant des domaines aussi divers que l'intelligence
 									artificielle, le développement de logiciels, la création de jeux vidéo, la réalisation d'applications mobiles et plus encore. Notre
 									polyvalence et notre expertise technique nous permettent de répondre à vos besoins spécifiques avec des solutions sur mesure, quelle que soit
@@ -64,7 +64,7 @@ export default component$(() => {
 								</button>
 							</h2>
 							<div data-collapse="collapse-3" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-								<div class="text-blue-gray-500/80 border-b p-4 text-sm leading-normal">
+								<div class="text-blue-gray-500/80 border-b p-4 text-base leading-normal">
 									L’accompagnement d'un directeur technique chez Feldrise se déroule en plusieurs étapes clés pour garantir le succès de votre projet :<br />
 									<br />
 									<span class="rounded-lg bg-primary p-1">1</span> Analyse des Besoins :
@@ -110,7 +110,7 @@ export default component$(() => {
 								</button>
 							</h2>
 							<div data-collapse="collapse-4" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-								<div class="text-blue-gray-500/80 border-b p-4 text-sm leading-normal">
+								<div class="text-blue-gray-500/80 border-b p-4 text-base leading-normal">
 									Vous pouvez d’abord prendre{' '}
 									<a class="text-primary" href="https://calendly.com/feldrise-victor/45min?primary_color=aa33ff&month=2024-03" target="_blank">
 										contact
@@ -137,7 +137,7 @@ export default component$(() => {
 								</button>
 							</h2>
 							<div data-collapse="collapse-5" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-								<div class="text-blue-gray-500/80 border-b p-4 text-sm leading-normal">
+								<div class="text-blue-gray-500/80 border-b p-4 text-base leading-normal">
 									Plus qu'un prestataire, nous sommes votre partenaire. Nous comprenons que les objectifs et les besoins d'un projet peuvent évoluer avec le
 									temps, et nous sommes pleinement équipés pour nous adapter à ces changements. Notre système de collaboration est conçu pour être réactif et
 									modulable, permettant une ajustement fluide à vos exigences. Que ce soit par la redéfinition de la roadmap, l'ajustement des ressources
@@ -157,7 +157,7 @@ export default component$(() => {
 								</button>
 							</h2>
 							<div data-collapse="collapse-6" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-								<div class="text-blue-gray-500/80 border-b p-4 text-sm leading-normal">
+								<div class="text-blue-gray-500/80 border-b p-4 text-base leading-normal">
 									Opter pour un stagiaire représente une solution économique, il travaille à temps plein au sein de votre équipe. Notre rôle est de mener le
 									processus de recrutement, d'assurer la supervision et de veiller à la qualité du travail. Cette approche vous offre une valeur ajoutée tout en
 									maîtrisant les coûts, garantissant ainsi un résultat professionnel et satisfaisant.
@@ -174,7 +174,7 @@ export default component$(() => {
 								</button>
 							</h2>
 							<div data-collapse="collapse-7" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
-								<div class="text-blue-gray-500/80 border-b p-4 text-sm leading-normal">
+								<div class="text-blue-gray-500/80 border-b p-4 text-base leading-normal">
 									Le modèle tarifaire de Feldrise repose sur un système contractuel flexible, similaire à un abonnement mensuel, avec une obligation minimale de
 									deux demi-journées par mois. Ces demi-journées offrent une flexibilité totale, pouvant être réparties en heures tout au long du mois selon vos
 									besoins. Au début de chaque mois, nous déterminons ensemble le nombre demi-journées requises pour le projet. En fin de mois, vous êtes facturé
@@ -188,7 +188,7 @@ export default component$(() => {
 				</section>
 
 				<h2
-					class="text-5xl font-bold underline decoration-primary decoration-[10px] underline-offset-[-5px]"
+					class="text-3xl font-bold underline decoration-primary decoration-[10px] underline-offset-[-5px] md:text-5xl"
 					style={{
 						textDecorationSkipInk: 'none',
 					}}
@@ -209,10 +209,10 @@ export default component$(() => {
 					"
 					>
 						<p>
-							<span class="text-3xl text-primary">Emilie NOUVEAU</span>
+							<span class="text-3xl text-secondary">Emilie NOUVEAU</span>
 							&nbsp;-&nbsp; Néovoice
 						</p>
-						<div class="my-2 h-1 w-1/3 bg-primary" />
+						<div class="my-2 h-1 w-1/3 bg-secondary" />
 						<p class="mt-6">
 							J'ai contacté Feldrise pour m'aider à accompagner mes deux salariés dans le domaine du développement. En tant qu'entrepreneuse j'ai trouvé auprès
 							de Victor un véritable soutien. Sérieux, disponible et toujours dans une très bonne ambiance, il a su être à l'écoute de mon projet et me proposer

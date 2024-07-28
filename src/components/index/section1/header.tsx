@@ -13,9 +13,9 @@ export default component$(() => {
 				py-12 shadow-lg backdrop-blur-lg lg:w-1/2
 			"
 			>
-				<img alt="Logo de Feldrise" src="/logo-feldrise/white-logo.svg" width={263} height={92} />
+				<img alt="Logo de Feldrise" src="/logo-feldrise/logo-large.png" width={263} height={92} />
 
-				<h1 class="text-2xl font-bold">La solution CTO pour les startups et PME</h1>
+				<h1 class="pt-4 text-2xl font-bold">La solution CTO pour les startups et PME</h1>
 				<div class="h-12" />
 				<p>
 					Parcequ'un projet digital ne se réalise pas seul, nous sommes là pour vous aider à innover et atteindre vos objectifs grâce à l’expertise de nos CTO.

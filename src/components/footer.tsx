@@ -4,8 +4,8 @@ import {component$} from '@builder.io/qwik';
 export default component$(() => {
 	return (
 		<footer class="flex w-full max-w-desktop flex-col items-center justify-center gap-4 px-8 py-12 md:flex-row md:justify-between">
-			<span class="text-center text-xl md:text-left">
-				Copyright © {new Date().getFullYear()} <span class="text-primary">Feldrise</span> - Made with{' '}
+			<span class="text-center text-base md:text-left">
+				Copyright © {new Date().getFullYear()} <span class="text-secondary">Feldrise</span> - Made with{' '}
 				<a class="text-secondary" href="https://qwik.builder.io/" target="_blank" rel="norefferer">
 					Qwik
 				</a>
@@ -14,7 +14,19 @@ export default component$(() => {
 			<div class="flex gap-4">
 				<a href="https://app.gather.town/app/0raFgE4sC0iW2rE4/Feldrise" target="_blank" rel="noreferrer">
 					{/* eslint-disable-next-line max-len */}
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M22 5V2l-5.89 5.89"/><circle cx="16.6" cy="15.89" r="3"/><circle cx="8.11" cy="7.4" r="3"/><circle cx="12.35" cy="11.65" r="3"/><circle cx="13.91" cy="5.85" r="3"/><circle cx="18.15" cy="10.09" r="3"/><circle cx="6.56" cy="13.2" r="3"/><circle cx="10.8" cy="17.44" r="3"/><circle cx="5" cy="19" r="3"/></g></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+						<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+							<path d="M22 5V2l-5.89 5.89" />
+							<circle cx="16.6" cy="15.89" r="3" />
+							<circle cx="8.11" cy="7.4" r="3" />
+							<circle cx="12.35" cy="11.65" r="3" />
+							<circle cx="13.91" cy="5.85" r="3" />
+							<circle cx="18.15" cy="10.09" r="3" />
+							<circle cx="6.56" cy="13.2" r="3" />
+							<circle cx="10.8" cy="17.44" r="3" />
+							<circle cx="5" cy="19" r="3" />
+						</g>
+					</svg>
 				</a>
 				<a href="https://fr.linkedin.com/in/feldrise" target="_blank" rel="noreferrer">
 					{/* eslint-disable-next-line max-len */}

@@ -16,7 +16,7 @@ export default component$<ISectionTitle>(props => {
 		"
 		>
 			<div class={`flex max-w-desktop grow px-8 ${props.alignment == 'end' ? 'justify-end' : 'justify-start'}`}>
-				<h2 class="text-5xl font-bold uppercase">{props.title}</h2>
+				<h2 class="text-3xl font-bold uppercase md:text-5xl">{props.title}</h2>
 			</div>
 		</div>
 	);

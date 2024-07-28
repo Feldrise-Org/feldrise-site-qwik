@@ -4,7 +4,7 @@ import SectionTitle from '~/components/section-title';
 
 export default component$(() => {
 	return (
-		<section id="whyacto" class="my-4 w-full">
+		<section id="whyacto" class="my-4 w-full text-base">
 			<SectionTitle title="Pourquoi un CTO à temps partagé ?" alignment="end" />
 			<div class="my-4 flex w-full items-center justify-center">
 				<div class="flex max-w-desktop grow">
@@ -17,10 +17,10 @@ export default component$(() => {
 					>
 						<div
 							class="
-							flex h-full w-full
-							grow
-							flex-col items-center justify-end rounded-md
-							bg-cto-illu1 bg-full bg-fixed p-4
+							bg-full100018 flex h-full
+							w-full
+							grow flex-col items-center justify-end rounded-md bg-cto-illu1
+							bg-contain bg-no-repeat p-4
 						"
 						/>
 						<div
@@ -28,7 +28,7 @@ export default component$(() => {
 							flex h-full w-full
 							grow
 							flex-col items-center justify-end rounded-md
-							bg-cto-illu2 bg-full bg-fixed p-4
+							bg-cto-illu2 bg-contain bg-no-repeat p-4
 						"
 						/>
 					</div>
@@ -60,7 +60,7 @@ export default component$(() => {
 						{/* L'accompagnement */}
 						<div class="flex flex-col gap-10 rounded-md border border-primary p-4">
 							<h3
-								class="text-3xl font-bold underline decoration-primary decoration-[5px] underline-offset-[-5px]"
+								class="text-xl font-bold underline decoration-primary decoration-[5px] underline-offset-[-5px] md:text-3xl"
 								style={{
 									textDecorationSkipInk: 'none',
 								}}
@@ -68,11 +68,16 @@ export default component$(() => {
 								Comment fonctionne l'accompagnement ?
 							</h3>
 
-							<p>Vous voulez en discuter avec un de nos CTO ? Rendez-vous dans <a class="text-primary" href="https://app.gather.town/app/0raFgE4sC0iW2rE4/Feldrise" target='_blank'>nos bureaux virtuels</a></p>
+							<p>
+								Vous voulez en discuter avec un de nos CTO ? Rendez-vous dans{' '}
+								<a class="text-secondary" href="https://app.gather.town/app/0raFgE4sC0iW2rE4/Feldrise" target="_blank">
+									nos bureaux virtuels
+								</a>
+							</p>
 
 							{/* #1 */}
 							<div class="flex flex-col gap-4">
-								<h4 class="text-2xl font-bold">
+								<h4 class="text-lg font-bold md:text-2xl">
 									<span class="rounded-md bg-primary px-4 py-2">1</span> La prise de contact
 								</h4>
 								<p>

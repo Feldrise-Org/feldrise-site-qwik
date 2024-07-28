@@ -22,7 +22,7 @@ const routes: IRoute[] = [
 	},
 	{
 		name: 'Nos bureaux virtuels',
-		href: "https://app.gather.town/app/0raFgE4sC0iW2rE4/Feldrise",
+		href: 'https://app.gather.town/app/0raFgE4sC0iW2rE4/Feldrise',
 	},
 ];
 
@@ -34,10 +34,10 @@ export default component$(() => {
 			<header class="fixed top-0 z-40 flex min-h-[90px] w-full items-center justify-center bg-neutral py-8">
 				<div class="flex max-w-desktop grow items-center justify-between px-8">
 					<a href="/" class="hidden 2xl:block">
-						<img src="/logo-feldrise/white-logo.svg" width={197} height={48} alt="Website's logo" />
+						<img src="/logo-feldrise/logo-large.png" width={197} height={48} alt="Website's logo" />
 					</a>
 					<a href="/" class="block 2xl:hidden">
-						<img src="/logo-feldrise/icon-white-logo.svg" width={75} height={48} alt="Website's logo" />
+						<img src="/logo-feldrise/logo.svg" width={75} height={48} alt="Website's logo" />
 					</a>
 					<div class="flex gap-8">
 						<CalendlyButton />

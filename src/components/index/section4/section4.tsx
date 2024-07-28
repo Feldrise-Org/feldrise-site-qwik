@@ -14,7 +14,7 @@ export default component$(() => {
 				class="
 				flex
 				max-w-desktop flex-col
-				items-center justify-center gap-16 px-24 py-48
+				items-center justify-center gap-16 px-6 py-24 md:px-24 md:py-48
 			"
 			>
 				<div
@@ -25,11 +25,11 @@ export default component$(() => {
 					<div
 						class="
 						flex flex-col gap-8 rounded-2xl
-						bg-[rgba(0,0,0,0.45)] p-12 shadow-lg backdrop-blur
+						bg-[rgba(0,0,0,0.45)] p-8  shadow-lg backdrop-blur md:p-12
 					"
 					>
 						<h2
-							class="text-5xl font-bold underline decoration-primary decoration-[10px] underline-offset-[-5px]"
+							class="text-2xl font-bold underline decoration-primary decoration-[10px] underline-offset-[-5px] md:text-5xl"
 							style={{
 								textDecorationSkipInk: 'none',
 							}}

@@ -8,12 +8,12 @@ interface IOfferCardProps {
 }
 
 export default component$<IOfferCardProps>(props => {
-	const className = cx('flex flex-col items-center justify-end min-h-[200px] bg-cover bg-center h-10 p-4', props.image);
+	const className = cx('flex flex-col items-center bg-primary justify-end min-h-[200px] bg-contain bg-no-repeat bg-center h-10 p-4', props.image);
 	return (
 		<article class="h-full w-full grow rounded-md border border-primary">
 			{/* L'image de l'offre */}
 			<div class={className}>
-				<h3 class="rounded-md bg-neutral px-4 py-2 text-2xl">{props.title}</h3>
+				<h3 class="rounded-md bg-neutral px-4 py-2 text-xl md:text-2xl">{props.title}</h3>
 			</div>
 			<div class="flex flex-col gap-4 p-6">
 				<p class="text-secondary">{props.price}</p>

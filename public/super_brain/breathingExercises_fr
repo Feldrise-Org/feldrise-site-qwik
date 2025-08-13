@@ -1,0 +1,18 @@
+[
+    {
+        "duration": 30,
+        "description": "C'est un exercise de réspiration simple... Prenez une longue inspiration et expirez doucement durant 30 secondes."
+    },
+    {
+        "duration": 30,
+        "description": "C'est un exercise de réspiration simple... Inspirez rapidement puis expirer lentement pendant 30 secondes"
+    },
+    {
+        "duration": 10,
+        "description": "C'est un exercise de réspiration simple... Inspirez et expirer rapidement pendant 10 secondes."
+    },
+    {
+        "duration": 90,
+        "description": "C'est un exercise de réspiration simple... Revenez à votre respiration normale."
+    }
+]

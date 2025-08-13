@@ -1,0 +1,19 @@
+[
+    {
+        "title": "M.O.M.",
+        "summary": "Vous vous rappelez de MOM ?",
+        "content": [
+            "Motivation, Observation, and Mechanic. Vous le savez surement, mais vous connaissez mieux ce que vous devez faire que ce que vous savez."
+        ]
+    },
+    {
+        "title": "Les clés pour un Supercerveau",
+        "summary": "Il y a 10 clés pour débloquer votre Supercerveau!",
+        "content": [
+            "Vous souvenez vous des 10 clés pour débloquer votre Supercerveau ?\n",
+            "- Un régime bon pour le cerveau\n",
+            "- Détruire les ANTs\n",
+            "- Exercices"
+        ]
+    }
+]

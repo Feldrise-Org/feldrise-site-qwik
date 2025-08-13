@@ -1,0 +1,18 @@
+[
+    {
+        "duration": 30,
+        "description": "This is a simple breathing exercise... Take a long breath and release slowly for 30 seconds."
+    },
+    {
+        "duration": 30,
+        "description": "This is a simple breathing exercise... Take a quick breath and release slowly for 30 seconds."
+    },
+    {
+        "duration": 10,
+        "description": "This is a simple breathing exercise... Take a quick breath and release quickly for 30 seconds."
+    },
+    {
+        "duration": 90,
+        "description": "This is a simple breathing exercise... Go back to you normal respiration."
+    }
+]
